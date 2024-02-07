@@ -18,7 +18,6 @@ public class ShopAPI extends PrestashopSDK {
         URI uri = addParameters(baseUrl("/shops"), params);
         HttpRequest request = get(uri);
         HttpResponse.BodyHandler<ShopWrapper> handler = new XmlBodyHandler<>(ShopWrapper.class);
-        System.out.println("handler = " + handler);
 
         return getRequestWrapped(request, handler);
     }
