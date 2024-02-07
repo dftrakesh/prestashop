@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.dftrakesh</groupId>
-    <artifactId>prestashop-rest</artifactId>
-    <version>0.8</version>
+    <artifactId>prestashop</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>prestashop</name>
-    <description>prestashop API using JDK 11</description>
+    <description>Prestashop API using JDK 11</description>
     <url>https://github.com/dftrakesh/prestashop</url>
 
     <licenses>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.13.0</version> <!-- Use the latest version available -->
+            <version>2.13.0</version>
         </dependency>
 
     </dependencies>

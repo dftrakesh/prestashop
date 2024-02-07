@@ -27,10 +27,11 @@ public class XmlBodyHandler<T> implements HttpResponse.BodyHandler<T> {
                 upstream,
                 (String body) -> {
                     try {
-
                         XmlMapper xmlMapper = new XmlMapper();
-                        String CleanedBody = body.substring(body.indexOf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
-                        return xmlMapper.readValue(CleanedBody, targetType);
+                        System.out.println("body = " + body);
+                        String cleanedBody = body.substring(body.indexOf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
+
+                        return xmlMapper.readValue(cleanedBody, targetType);
                     } catch (IOException e) {
                         throw new UncheckedIOException(e);
                     }
