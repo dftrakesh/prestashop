@@ -1,12 +1,13 @@
 package com.dft.prestashop;
 
-import com.dft.prestashop.handler.XmlBodyHandler;
+import com.dft.prestashop.model.prestashopCredential.PrestashopAccessCredentials;
 import com.dft.prestashop.model.shop.ShopWrapper;
 
 import java.net.URI;
 import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.HashMap;
+
+import static com.dft.prestashop.constantcodes.ConstantCode.SHOP_ENDPOINT;
 
 public class ShopAPI extends PrestashopSDK {
 
@@ -15,11 +16,8 @@ public class ShopAPI extends PrestashopSDK {
     }
 
     public ShopWrapper getShops(HashMap<String, String> params) {
-        URI uri = addParameters(baseUrl("/shops"), params);
+        URI uri = addParameters(baseUrl(SHOP_ENDPOINT), params);
         HttpRequest request = get(uri);
-        HttpResponse.BodyHandler<ShopWrapper> handler = new XmlBodyHandler<>(ShopWrapper.class);
-
-        return getRequestWrapped(request, handler);
+        return getRequestWrapped(request, ShopWrapper.class);
     }
-
 }
