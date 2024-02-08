@@ -1,4 +1,4 @@
-package com.dft.prestashop;
+package com.dft.prestashop.model.accesscredential;
 
 import lombok.Data;
 

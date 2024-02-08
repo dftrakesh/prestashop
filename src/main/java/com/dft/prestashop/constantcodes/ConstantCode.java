@@ -7,6 +7,7 @@ public interface ConstantCode {
     String ACCEPT = "Accept";
     String DISPLAY = "display";
     String DISPLAY_TYPE = "full";
+    String SHOP_ENDPOINT = "/shops";
     String CONTENT_TYPE = "Content-Type";
     String AUTHORIZATION = "Authorization";
     String ACCEPT_VALUE = "application/xml";
