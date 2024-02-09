@@ -2,7 +2,6 @@ package com.dft.prestashop.constantcodes;
 
 public interface ConstantCode {
 
-    String HTTP = "http://";
     String BASIC = "Basic ";
     String ACCEPT = "Accept";
     String DISPLAY = "display";

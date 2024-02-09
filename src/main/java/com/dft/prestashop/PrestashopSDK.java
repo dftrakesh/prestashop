@@ -22,7 +22,6 @@ import static com.dft.prestashop.constantcodes.ConstantCode.BASE_ENDPOINT;
 import static com.dft.prestashop.constantcodes.ConstantCode.BASIC;
 import static com.dft.prestashop.constantcodes.ConstantCode.CONTENT_TYPE;
 import static com.dft.prestashop.constantcodes.ConstantCode.CONTENT_TYPE_VALUE;
-import static com.dft.prestashop.constantcodes.ConstantCode.HTTP;
 
 public class PrestashopSDK {
 
@@ -84,7 +83,7 @@ public class PrestashopSDK {
     }
 
     protected URI baseUrl(String path) {
-        return URI.create(String.format("%s%s%s%s", HTTP, prestashopAccessCredentials.getDomain(), BASE_ENDPOINT, path));
+        return URI.create(String.format("%s%s%s", prestashopAccessCredentials.getDomain(), BASE_ENDPOINT, path));
     }
 
     protected URI addParameters(URI uri, HashMap<String, String> params) {
